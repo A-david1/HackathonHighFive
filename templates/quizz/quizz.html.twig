@@ -3,5 +3,48 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <h1>test quizz</h1>
+    <div class="container-fluid fiverbg w-100 ">
+        <div class="row m-5">
+            <div class="col-6 justify-content-center">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                <form action="">
+                    <div class="p-3 text-center">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center ">
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 ">
+                            <p>Réponse 1</p>
+                        </div>
+                        <div class="col-md-5 button bg-danger mr-2  mb-2">
+                            <p>Réponse 2</p>
+                        </div>
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2">
+                            <p>Réponse 3</p>
+                        </div>
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 ">
+                            <p>Réponse 4</p>
+                        </div>
+                    </div>
+                    <div class="text-center my-5">
+                        <button type="submit" class="btn btn-success shadow">Poursuivre > </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-6">
+                <img src="{{ asset('build/Group.png')}}" alt="">
+            </div>
+
+        </div>
+
+    </div>
 {% endblock %}
