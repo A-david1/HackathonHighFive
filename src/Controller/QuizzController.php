@@ -2,6 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Repository\AnswerRepository;
+use App\Repository\ChoiceRepository;
+use App\Repository\QuestionRepository;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,9 +25,58 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/question", name="quizz")
      */
-    public function quizz()
+    public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository, UserRepository $userRepository)
     {
-        return $this->render('quizz/quizz.html.twig');
+        $hasAnswer = false;
+
+        $question = $questionRepository->findAll();
+        $choice = $choiceRepository->findAll();
+
+        $questions = [
+            0 => 'canard ou lapin ?',
+            1 => 'verre à moitié....',
+            2 => 'réseau social ?',
+            ];
+
+        $choices = [
+            'question1' => [
+                        'choice1' => 'Canard',
+                        'choice2' => 'Lapin',
+                    ],
+            'question2' => [
+                        'choice1' => 'vide',
+                        'choice2' => 'plein',
+                    ],
+            'question3' => [
+                        'choice1' => 'facebook',
+                        'choice2' => 'twiter',
+                        'choice3' => 'insta',
+                        'choice4' => 'linkedin',
+                    ],
+        ];
+
+
+        return $this->render('quizz/quizz.html.twig', [
+            'question' => $question,
+            'choice' => $choice,
+            'questions' => $questions,
+            'choices' => $choices,
+            'hasAnswer' => $hasAnswer,
+           // 'user' => $userRepository->findOneBy($this->getUser()),
+        ]);
+    }
+
+
+    /**
+     * @Route("/quizz/user", name="user_hasAnswered")
+     */
+    public function hasAnswered(EntityManagerInterface $entityManager, User $user): Response
+    {
+        $hasAnswer = true;
+
+        $user = $hasAnswer;
+
+        return $this->redirectToRoute('quizz');
     }
 
     /**

@@ -3,5 +3,21 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <h1>test quizz</h1>
+
+    {% if hasAnswer == false %}
+        <div>
+            <h2 class="text-white">{{ questions.0 }}</h2>
+        </div>
+        <div>
+            <a href="{{ path('user_hasAnswered') }}"><h2 class="text-white">{{ choices.question1.choice1 }}</h2></a>
+            <a href="{{ path('user_hasAnswered') }}"><h2 class="text-white">{{ choices.question1.choice2 }}</h2></a>
+
+{#            <a href="{{ path('user_hasAnswered', {user: user.id}) }}">#}
+        </div>
+    {% else %}
+        <div>
+            <h2 class="text-white">stats des réponce a la question</h2>
+        </div>
+    {% endif %}
+
 {% endblock %}
