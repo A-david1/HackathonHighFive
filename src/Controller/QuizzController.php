@@ -2,6 +2,11 @@
 
 namespace App\Controller;
 
+
+use App\Entity\Answer;
+use App\Entity\Choice;
+use App\Form\ChoiceType;
+use Doctrine\ORM\EntityManager;
 use App\Entity\User;
 use App\Repository\AnswerRepository;
 use App\Repository\ChoiceRepository;
@@ -11,6 +16,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class QuizzController extends AbstractController
 {
@@ -39,20 +45,6 @@ class QuizzController extends AbstractController
             'user' => $user,
         ]);
     }
-
-
-//    /**
-//     * @Route("/quizz/{user}", name="user_hasAnswered")
-//     */
-//    public function hasAnswered(EntityManagerInterface $entityManager, User $user): Response
-//    {
-//        $user->setHasAnswered(!$user->getHasAnswered());
-//        $entityManager->persist($user);
-//        $entityManager->flush();
-//
-//        return $this->redirectToRoute('quizz');
-//    }
-
     /**
      * @Route("/quizz/results", name="quizz_results")
      */
