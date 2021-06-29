@@ -26,7 +26,7 @@ class mlProcessor
             ->apply(new NumericStringConverter());
 
         $testing = Unlabeled::fromIterator(new CSV(
-           '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabel_faketest.csv'))
+           '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'))
             ->apply(new NumericStringConverter());
 
         $estimator = new NaiveBayes();
