@@ -22,7 +22,7 @@ body {
   height: 100vh;
 }
 
-.container {
+.container-planet {
   position: relative;
   width: 600px;
   height: 600px;
@@ -53,11 +53,6 @@ body {
   background: linear-gradient(to bottom, $orange-light 1%, $orange 50%, $orange-dark 100%);
   border-radius: 50%;
   transform: rotate(-15deg) translate(-25%, -55%);
-}
-
-.avatar {
-  width: 60px;
-  height: 60px;
 }
 
 .logo-planet {
@@ -118,30 +113,50 @@ body {
   border-radius: 50%;
   transform: rotate(-15deg);
 }
+.avatar{
+  height: 60px;
+  width: 60px;
+}
 
 .orbit {
-  width: 20px;
-  height: 20px;
-  background: transparent;
-  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  border-radius: 20%;
   position: absolute;
-  top: 47%;
-  left: 47%;
-  transform: translate(-50%, -50%);
   z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @for $i from 1 through 6 {
-
-  .orbit-#{$i} {
-    animation: orbit-#{$i} 5s * $i linear infinite;
+  .orbit1-#{$i} {
+    animation: orbit1-#{$i} 5s  linear infinite;
+  }
+  @keyframes orbit1-#{$i} {
+    from { transform: rotate($i * 60deg) translateX(65px) }
+    to   { transform: rotate(360deg + ($i * 60deg)) translateX(65px) }
   }
 
-  @keyframes orbit-#{$i} {
-    from { transform: rotate(0deg) translateX(50px + 15px * $i) rotate(0deg)      }
-    to   { transform: rotate(360deg) translateX(50px + 15px * $i) rotate(-360deg) }
+
+  .orbit2-#{$i} {
+    animation: orbit2-#{$i} 11s  linear infinite;
   }
+  @keyframes orbit2-#{$i} {
+    from { transform: rotate($i * 60deg) translateX(160px) }
+    to   { transform: rotate(360deg + ($i * 60deg)) translateX(160px) }
+  }
+
+  .orbit3-#{$i} {
+    animation: orbit3-#{$i} 16s  linear infinite;
+  }
+  @keyframes orbit3-#{$i} {
+    from { transform: rotate($i * 60deg) translateX(220px) }
+    to   { transform: rotate(360deg + ($i * 60deg)) translateX(220px) }
+  }
+
 }
+
 
 .cloud {
   background: #f1f1f1;
@@ -205,7 +220,7 @@ body {
 .cloud-3 { right: 10px }
 .cloud-4 { right: 184px; bottom: 0 }
 .cloud-5 { right: 24px; bottom: 12px }
-.cloud-6 { right: -45px; bottom: 9 }
+.cloud-6 { right: -45px; bottom: 9px }
 
 .star {
   position: absolute;

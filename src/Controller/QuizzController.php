@@ -43,10 +43,8 @@ class QuizzController extends AbstractController
             'questions' => $questions,
             'choices' => $choices,
             'user' => $user,
-
         ]);
     }
-
     /**
      * @Route("/quizz/results", name="quizz_results")
      */
