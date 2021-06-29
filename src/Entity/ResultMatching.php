@@ -20,7 +20,7 @@ class ResultMatching
     private $id;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="integer")
      */
     private $isMatch;
 
