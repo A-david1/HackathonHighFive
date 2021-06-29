@@ -63,5 +63,6 @@ class QuestionFixtures extends Fixture
             $manager->persist($question);
 
             $manager->flush();
+
     }
 }
