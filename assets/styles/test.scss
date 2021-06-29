@@ -133,13 +133,20 @@ body {
 
 @for $i from 1 through 6 {
 
-  .orbit-#{$i} {
-    animation: orbit-#{$i} 5s * $i linear infinite;
-  }
+  @for $j from 1 through 6 {
 
-  @keyframes orbit-#{$i} {
-    from { transform: rotate(0deg) translateX(50px + 15px * $i) rotate(0deg)      }
-    to   { transform: rotate(360deg) translateX(50px + 15px * $i) rotate(-360deg) }
+    .orbit-#{$i*$j} {
+      animation: orbit-#{$i} 5s * $i linear infinite;
+    }
+
+    @keyframes orbit-#{$i*$j} {
+      from {
+        transform: rotate(0deg) translateX(50px + 15px * $i) rotate(0deg)
+      }
+      to {
+        transform: rotate(-360deg) translateX(50px + 15px * $i) rotate(-360deg)
+      }
+    }
   }
 }
 
