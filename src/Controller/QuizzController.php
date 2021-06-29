@@ -242,15 +242,14 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/results", name="quizz_results")
      */
-    public function results(UserRepository $userRepository, AnswerRepository $answerRepository)
+    public function results(UserRepository $userRepository, AnswerRepository $answerRepository, EntityManagerInterface $entityManager)
     {
         $user = $userRepository->findOneBy(['id' => 5]);
 
         $answerUser = $answerRepository->findBy(['user' => 5]);
-        $answerUser =
+        $answerQuestionUser = $user->getAnswers();
 
-
-        dd($answerUser);
+        dd($user->getAnswers());
 
         return $this->render('quizz/results.html.twig');
     }
