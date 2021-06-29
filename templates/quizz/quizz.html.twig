@@ -3,45 +3,104 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <div class="container-fluid fiverbg w-100 ">
-        <div class="row m-5">
-            <div class="col-6 justify-content-center">
+    <div class="container-fluid fiverbg w-100 gradient-color">
+        <div class="row m-5 align-content-center ">
+            <div class="col-6 justify-content-center ">
                     <div>
-                        <img src="" alt="">
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
                 <form action="">
-                    <div class="p-3 text-center">
-                        <h1>
+                    <div class="p-3 text-center text-white">
+                        <h1 >
                             Question 1
                         </h1>
-                        <p class="text-break ">
+                        <p class="text-break px-5 ">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam.
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center ">
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 ">
-                            <p>Réponse 1</p>
+                    <div class=" row text-center justify-content-center text-white">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                            <input type="checkbox"> <p>Réponse 1</p> </input>
                         </div>
-                        <div class="col-md-5 button bg-danger mr-2  mb-2">
-                            <p>Réponse 2</p>
+
+                        <div class="col-md-5 button bg-danger mr-2  mb-2 pt-2 shadow ">
+                            <input type="checkbox"> <p>Réponse 2</p> </input>
                         </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2">
-                            <p>Réponse 3</p>
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                            <input type="checkbox"> <p>Réponse 3</p> </input>
                         </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 ">
-                            <p>Réponse 4</p>
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow  ">
+                            <input type="checkbox"> <p>Réponse 4</p> </input>
                         </div>
                     </div>
                     <div class="text-center my-5">
-                        <button type="submit" class="btn btn-success shadow">Poursuivre > </button>
+                        <button type="submit" class="btn btn-success shadow rounded-pill">Poursuivre > </button>
                     </div>
                 </form>
             </div>
 
             <div class="col-6">
-                <img src="{{ asset('build/Group.png')}}" alt="">
+                <div class="example-wrapper">
+
+
+                    <!-- clouds -->
+{#                    <div class="container">#}
+                        <!-- stars -->
+                        <div class="star star-1"></div>
+                        <div class="star star-2"></div>
+                        <div class="star star-3"></div>
+                        <!-- clouds -->
+                        <div class="">
+                            <div class="cloud-group-1">
+                                <div class="cloud cloud-1"></div>
+                                <div class="cloud cloud-2"></div>
+                                <div class="cloud cloud-3"></div>
+                                <div class="cloud cloud-4"></div>
+                                <div class="cloud cloud-5"></div>
+                                <div class="cloud cloud-6"></div>
+                            </div>
+                            <div class="cloud-group-2">
+                                <div class="cloud cloud-1"></div>
+                                <div class="cloud cloud-2"></div>
+                                <div class="cloud cloud-3"></div>
+                                <div class="cloud cloud-4"></div>
+                                <div class="cloud cloud-5"></div>
+                                <div class="cloud cloud-6"></div>
+                            </div>
+                            <div class="cloud-group-3">
+                                <div class="cloud cloud-1"></div>
+                                <div class="cloud cloud-2"></div>
+                                <div class="cloud cloud-3"></div>
+                                <div class="cloud cloud-4"></div>
+                                <div class="cloud cloud-5"></div>
+                                <div class="cloud cloud-6"></div>
+                            </div>
+                        </div>
+                        <!-- orbits -->
+                        <div class="orbit orbit-1"><img class="avatar" src="{{ asset('build/cs1048486361028912.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit-2"><img class="avatar" src="{{ asset('build/cs10188651804540743.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit-3"><img class="avatar" src="{{ asset('build/cs11010345522393046.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit-4"><img class="avatar" src="{{ asset('build/cs100630750052269087.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit-5"><img class="avatar" src="{{ asset('build/cs103822919467497853.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit-6"><img class="avatar" src="{{ asset('build/cs1008511162926380344.png') }}" alt="avatar1"></div>
+                        <!-- main planet -->
+                        <div class="ring-before"></div>
+                        <div class="ring-bigger-before"></div>
+                        <div class="planet"><img class="logo-planet" src="{{ asset('build/Fiverr_Symbol_Green_RGB.png') }}" alt="planet"></div>
+                        <div class="ring-after"></div>
+                        <div class="ring-bigger-after"></div>
+                        <!-- sub planet -->
+{#                        <div class="sub-planet"></div>#}
+{#                    </div>#}
+
+
+                </div>
+
+
+            </div>
             </div>
 
         </div>
