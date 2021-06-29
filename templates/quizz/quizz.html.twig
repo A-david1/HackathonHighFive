@@ -25,18 +25,33 @@
                     <div class=" row text-center justify-content-center text-white check-radio">
 
                         <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            {{ form_widget (form.choice1) }}
+                            {{ form_label(form.choice1) }}
+                           <div class="w-100 h-100 form-check-input ">
+                               {{ form_widget (form.choice1) }}
+                           </div>
                         </div>
 
-                        <div class="col-md-5 button bg-danger mr-2  mb-2 pt-2 shadow" >
-                            {{ form_widget (form.choice2) }}
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {{ form_label(form.choice2) }}
+                            <div class="w-100 h-100 form-check-input ">
+                                {{ form_widget (form.choice2) }}
+                            </div>
                         </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
-                            {{ form_widget (form.choice3) }}
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {{ form_label(form.choice3) }}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {{ form_widget (form.choice3) }}
+                            </div>
                         </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
-                            {{ form_widget (form.choice4) }}
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {{ form_label(form.choice4) }}
+                            <div class="w-100 h-100 form-check-input ">
+                                {{ form_widget (form.choice4) }}
+                            </div>
                         </div>
+
                     </div>
                     <div class="text-center my-5">
                         <button type="submit" class="btn btn-success shadow rounded-pill">Poursuivre > </button>

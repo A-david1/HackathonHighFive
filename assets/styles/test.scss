@@ -248,7 +248,7 @@ body {
   .form-check-input {
     display: none;
     &.form-check-input[type='radio']:checked + .checkbox-label {
-      color: red;
+      color: blue;
       background-color: yellow;
       font-size: x-large;
     }

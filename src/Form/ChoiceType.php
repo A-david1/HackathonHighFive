@@ -15,12 +15,18 @@ class ChoiceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('choice1',RadioType::class,[
-                'attr' => ['class' =>'form-check-input, checkbox-label'],
-            ])
-            ->add('choice2',RadioType::class)
-            ->add('choice3',RadioType::class)
-            ->add('choice4',RadioType::class)
+            ->add('', \Symfony\Component\Form\Extension\Core\Type\ChoiceType::class, [
+                'choices' => [
+                    'Answer1' => '1',
+                    'Answer2' => '2',
+                    'Answer3' => '3',
+                    'Answer4' => '4',
+
+                ],
+                'expanded' => true,
+                'multiple' => false,
+                'label' => false,]);
+
         ;
     }
 
