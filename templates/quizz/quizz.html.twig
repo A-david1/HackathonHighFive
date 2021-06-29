@@ -6,14 +6,59 @@
     <div class="container-fluid fiverbg w-100 gradient-color">
         <div class="row m-5 align-content-center ">
             <div class="col-6 justify-content-center ">
+{#                {{ form_start (form) }}#}
+                <div class="question1" id="div-question">
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
-                <form action="">
-                    {{ form_start (form) }}
-                    <div class="p-3 text-center text-white">
+                        <div class="p-3 text-center text-white">
+                            <h1>
+                                Question 1
+                            </h1>
+                            <p class="text-break px-5 ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                        <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <h1 >
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                                {{ form_label(form.choice1) }}#} <h3> Reponse</h3>
+                               <div class="w-100 h-100 form-check-input ">
+{#                                   {{ form_widget (form.choice1) }}#}
+                               </div>
+                            </div>
+
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                                {{ form_label(form.choice2) }}#} <h3> Reponse</h3>
+                                <div class="w-100 h-100 form-check-input ">
+{#                                    {{ form_widget (form.choice2) }}#}
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                                {{ form_label(form.choice3) }}#}<h3> Reponse</h3>
+                                <div class="w-100 h-100 form-check-input checkbox-label ">
+{#                                    {{ form_widget (form.choice3) }}#}
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                                {{ form_label(form.choice4) }}#}<h3> Reponse</h3>
+                                <div class="w-100 h-100 form-check-input ">
+{#                                    {{ form_widget (form.choice4) }}#}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Q2 -->
+                <div class="question2" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
                             Question 1
                         </h1>
                         <p class="text-break px-5 ">
@@ -25,51 +70,407 @@
                     <div class=" row text-center justify-content-center text-white check-radio">
 
                         <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            {{ form_label(form.choice1) }}
-                           <div class="w-100 h-100 form-check-input ">
-                               {{ form_widget (form.choice1) }}
-                           </div>
-                        </div>
-
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            {{ form_label(form.choice2) }}
+{#                            {{ form_label(form.choice1) }}#}<h3> Reponse</h3>
                             <div class="w-100 h-100 form-check-input ">
-                                {{ form_widget (form.choice2) }}
+{#                                {{ form_widget (form.choice1) }}#}
                             </div>
                         </div>
 
                         <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            {{ form_label(form.choice3) }}
+{#                            {{ form_label(form.choice2) }}#}<h3> Reponse</h3>
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice3) }}#}<h3> Reponse</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
-                                {{ form_widget (form.choice3) }}
+{#                                {{ form_widget (form.choice3) }}#}
                             </div>
                         </div>
 
                         <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            {{ form_label(form.choice4) }}
+{#                            {{ form_label(form.choice4) }}#}<h3> Reponse</h3>
                             <div class="w-100 h-100 form-check-input ">
-                                {{ form_widget (form.choice4) }}
+{#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div class="question3" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice1) }}#}<h3> Reponse</h3>
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice1) }}#}
                             </div>
                         </div>
 
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice2) }}#}<h3> Reponse</h3>
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice3) }}#}<h3> Reponse</h3>
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+{#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice4) }}#}<h3> Reponse</h3>
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>input
                     </div>
-                    <div class="text-center my-5">
-                        <button type="submit" class="btn btn-success shadow rounded-pill">Poursuivre > </button>
+                </div>
+                <!-- Q4 -->
+                <div class="question4" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
-                    {{ form_end (form)}}
-                </form>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+{#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+{#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+{#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ooo Q5 -->
+                <div class="question5" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q6 -->
+                <div class="question6" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q7 -->
+                <div class="question7" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q8 -->
+                <div class="question8" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q9 -->
+                <div class="question9" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Q10 -->
+                <div class="question10" id="div-question">
+                    <div>
+                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
+                    </div>
+                    <div class="p-3 text-center text-white">
+                        <h1>
+                            Question 1
+                        </h1>
+                        <p class="text-break px-5 ">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam.
+                        </p>
+                    </div>
+                    <div class=" row text-center justify-content-center text-white check-radio">
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice1) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice2) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice2) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice3) }}#}
+                            <div class="w-100 h-100 form-check-input checkbox-label ">
+                                {#                                {{ form_widget (form.choice3) }}#}
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                            {#                            {{ form_label(form.choice4) }}#}
+                            <div class="w-100 h-100 form-check-input ">
+                                {#                                {{ form_widget (form.choice4) }}#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{#                {{ form_end (form)}}#}
             </div>
 
             <div class="col-6 p-3">
                 <div class="example-wrapper">
-                    <!-- clouds -->
-{#                    <div class="container">#}
-                        <!-- stars -->
-{#                        <div class="star star-1"></div>#}
-{#                        <div class="star star-2"></div>#}
-{#                        <div class="star star-3"></div>#}
-                        <!-- clouds -->
-
                         <!-- orbits -->
                         <div class="orbit orbit-1"><img class="avatar" src="{{ asset('build/cs1048486361028912.png') }}" alt="avatar1"></div>
                         <div class="orbit orbit-2"><img class="avatar" src="{{ asset('build/cs10188651804540743.png') }}" alt="avatar1"></div>
@@ -83,9 +484,7 @@
                         <div class="planet"><img class="logo-planet" src="{{ asset('build/Fiverr_Symbol_Green_RGB.png') }}" alt="planet"></div>
                         <div class="ring-after"></div>
                         <div class="ring-bigger-after"></div>
-                        <!-- sub planet -->
-{#                        <div class="sub-planet"></div>#}
-{#                    </div>#}
+
                 </div>
             </div>
             </div>

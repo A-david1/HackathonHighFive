@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Answer;
 use App\Entity\Choice;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -15,7 +16,7 @@ class ChoiceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('', \Symfony\Component\Form\Extension\Core\Type\ChoiceType::class, [
+            ->add('answer', Answer::class, [
                 'choices' => [
                     'Answer1' => '1',
                     'Answer2' => '2',
