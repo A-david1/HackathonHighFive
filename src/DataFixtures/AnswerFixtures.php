@@ -15,15 +15,15 @@ class AnswerFixtures extends Fixture implements DependentFixtureInterface
     {
         for ($i = 1; $i < 100; $i++) {
 
-            for ($q = 1; $q < 10; $q++) {
+            for ($q = 1; $q <= 10; $q++) {
 
                 $answer = new Answer();
                 $answer->setUser($this->getReference('user_' . $i));
                 $answer->setQuestion($this->getReference('question_' . rand(1,10)));
-                if ($q < 5) {
-                    $answer->setAnswer(rand(0, 1));
-                } else {
+                if ($q <= 5) {
                     $answer->setAnswer(rand(0, 3));
+                } else {
+                    $answer->setAnswer(rand(0, 1));
                 }
 
                 $manager->persist($answer);
