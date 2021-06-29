@@ -2,10 +2,16 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Answer;
 use App\Entity\Choice;
 use App\Form\ChoiceType;
 use Doctrine\ORM\EntityManager;
+use App\Entity\User;
+use App\Repository\AnswerRepository;
+use App\Repository\ChoiceRepository;
+use App\Repository\QuestionRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,10 +31,18 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/question", name="quizz")
      */
-    public function question()
+    public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository, UserRepository $userRepository)
     {
 
-        return $this->render('quizz/quizz.html.twig',[
+        $questions = $questionRepository->findAll();
+        $choices = $choiceRepository->findAll();
+
+        $user = $userRepository->findOneBy(['id' => 100]);
+
+        return $this->render('quizz/quizz.html.twig', [
+            'questions' => $questions,
+            'choices' => $choices,
+            'user' => $user,
 
         ]);
     }
