@@ -31,18 +31,15 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/question", name="quizz")
      */
-    public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository, UserRepository $userRepository)
+    public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository)
     {
 
         $questions = $questionRepository->findAll();
         $choices = $choiceRepository->findAll();
 
-        $user = $userRepository->findOneBy(['id' => 100]);
-
         return $this->render('quizz/quizz.html.twig', [
             'questions' => $questions,
             'choices' => $choices,
-            'user' => $user,
         ]);
     }
     /**
