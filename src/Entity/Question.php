@@ -25,12 +25,6 @@ class Question
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Answer::class, inversedBy="question")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $answer;
-
-    /**
      * @ORM\OneToMany(targetEntity=Choice::class, mappedBy="question")
      */
     private $choice;
@@ -53,18 +47,6 @@ class Question
     public function setContent(string $content): self
     {
         $this->content = $content;
-
-        return $this;
-    }
-
-    public function getAnswer(): ?Answer
-    {
-        return $this->answer;
-    }
-
-    public function setAnswer(?Answer $answer): self
-    {
-        $this->answer = $answer;
 
         return $this;
     }

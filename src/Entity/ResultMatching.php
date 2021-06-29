@@ -45,12 +45,12 @@ class ResultMatching
         return $this->id;
     }
 
-    public function getIsMatch(): ?bool
+    public function getIsMatch(): ?int
     {
         return $this->isMatch;
     }
 
-    public function setIsMatch(bool $isMatch): self
+    public function setIsMatch(int $isMatch): self
     {
         $this->isMatch = $isMatch;
 
@@ -69,7 +69,6 @@ class ResultMatching
     {
         if (!$this->mentor->contains($mentor)) {
             $this->mentor[] = $mentor;
-            $mentor->setResultMatching($this);
         }
 
         return $this;
@@ -99,7 +98,6 @@ class ResultMatching
     {
         if (!$this->apprentice->contains($apprentice)) {
             $this->apprentice[] = $apprentice;
-            $apprentice->setResultMatching($this);
         }
 
         return $this;

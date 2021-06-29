@@ -39,20 +39,9 @@ class QuizzController extends AbstractController
             ];
 
         $choices = [
-            'question1' => [
-                        'choice1' => 'Canard',
-                        'choice2' => 'Lapin',
-                    ],
-            'question2' => [
-                        'choice1' => 'vide',
-                        'choice2' => 'plein',
-                    ],
-            'question3' => [
-                        'choice1' => 'facebook',
-                        'choice2' => 'twiter',
-                        'choice3' => 'insta',
-                        'choice4' => 'linkedin',
-                    ],
+            'question1' => ['Canard', 'Lapin'],
+            'question2' => ['vide', 'plein'],
+            'question3' => ['facebook', 'twiter', 'insta', 'linkedin'],
         ];
 
 
@@ -67,17 +56,17 @@ class QuizzController extends AbstractController
     }
 
 
-    /**
-     * @Route("/quizz/user", name="user_hasAnswered")
-     */
-    public function hasAnswered(EntityManagerInterface $entityManager, User $user): Response
-    {
-        $hasAnswer = true;
-
-        $user = $hasAnswer;
-
-        return $this->redirectToRoute('quizz');
-    }
+//    /**
+//     * @Route("/quizz/user", name="user_hasAnswered")
+//     */
+//    public function hasAnswered(EntityManagerInterface $entityManager, User $user): Response
+//    {
+//        $hasAnswer = true;
+//
+//        $user = $hasAnswer;
+//
+//        return $this->redirectToRoute('quizz');
+//    }
 
     /**
      * @Route("/quizz/results", name="quizz_results")
