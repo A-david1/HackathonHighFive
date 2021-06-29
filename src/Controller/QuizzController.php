@@ -2,9 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Choice;
+use App\Form\ChoiceType;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class QuizzController extends AbstractController
 {
@@ -19,9 +24,21 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/question", name="quizz")
      */
-    public function quizz()
+    public function question(EntityManagerInterface $entityManager, Request $request): Response
     {
-        return $this->render('quizz/quizz.html.twig');
+
+        $choice = new Choice();
+        $form = $this->createForm(ChoiceType::class, $choice);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($choice);
+            $entityManager->flush();
+        }
+
+        return $this->render('quizz/quizz.html.twig',[
+            "form" => $form->createView(),
+        ]);
     }
 
     /**

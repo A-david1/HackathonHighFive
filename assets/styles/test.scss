@@ -240,3 +240,18 @@ body {
   from { left: -100px             }
   to   { left: calc(100% + 100px) }
 }
+
+.checkbox-radio {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .form-check-input {
+    display: none;
+    &.form-check-input[type='radio']:checked + .checkbox-label {
+      color: red;
+      background-color: yellow;
+      font-size: x-large;
+    }
+  }
+}
+
