@@ -25,20 +25,14 @@ class Answer
     private $answer;
 
     /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="answer")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="answers")
      */
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity=Question::class, mappedBy="answer")
+     * @ORM\ManyToOne(targetEntity=Question::class, inversedBy="answers")
      */
     private $question;
-
-    public function __construct()
-    {
-        $this->user = new ArrayCollection();
-        $this->question = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -57,62 +51,26 @@ class Answer
         return $this;
     }
 
-    /**
-     * @return Collection|User[]
-     */
-    public function getUser(): Collection
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function addUser(User $user): self
+    public function setUser(?User $user): self
     {
-        if (!$this->user->contains($user)) {
-            $this->user[] = $user;
-            $user->setAnswer($this);
-        }
+        $this->user = $user;
 
         return $this;
     }
 
-    public function removeUser(User $user): self
-    {
-        if ($this->user->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getAnswer() === $this) {
-                $user->setAnswer(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Question[]
-     */
-    public function getQuestion(): Collection
+    public function getQuestion(): ?Question
     {
         return $this->question;
     }
 
-    public function addQuestion(Question $question): self
+    public function setQuestion(?Question $question): self
     {
-        if (!$this->question->contains($question)) {
-            $this->question[] = $question;
-            $question->setAnswer($this);
-        }
-
-        return $this;
-    }
-
-    public function removeQuestion(Question $question): self
-    {
-        if ($this->question->removeElement($question)) {
-            // set the owning side to null (unless already changed)
-            if ($question->getAnswer() === $this) {
-                $question->setAnswer(null);
-            }
-        }
+        $this->question = $question;
 
         return $this;
     }

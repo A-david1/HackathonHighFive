@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -48,16 +50,19 @@ class User
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Answer::class, inversedBy="user")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(type="boolean")
      */
-    private $answer;
+    private $hasAnswered;
 
     /**
-     * @ORM\ManyToOne(targetEntity=ResultMatching::class, inversedBy="mentor")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity=Answer::class, mappedBy="user")
      */
-    private $resultMatching;
+    private $answers;
+
+    public function __construct()
+    {
+        $this->answers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -136,26 +141,44 @@ class User
         return $this;
     }
 
-    public function getAnswer(): ?Answer
+    public function getHasAnswered(): ?bool
     {
-        return $this->answer;
+        return $this->hasAnswered;
     }
 
-    public function setAnswer(?Answer $answer): self
+    public function setHasAnswered(bool $hasAnswered): self
     {
-        $this->answer = $answer;
+        $this->hasAnswered = $hasAnswered;
 
         return $this;
     }
 
-    public function getResultMatching(): ?ResultMatching
+    /**
+     * @return Collection|Answer[]
+     */
+    public function getAnswers(): Collection
     {
-        return $this->resultMatching;
+        return $this->answers;
     }
 
-    public function setResultMatching(?ResultMatching $resultMatching): self
+    public function addAnswer(Answer $answer): self
     {
-        $this->resultMatching = $resultMatching;
+        if (!$this->answers->contains($answer)) {
+            $this->answers[] = $answer;
+            $answer->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnswer(Answer $answer): self
+    {
+        if ($this->answers->removeElement($answer)) {
+            // set the owning side to null (unless already changed)
+            if ($answer->getUser() === $this) {
+                $answer->setUser(null);
+            }
+        }
 
         return $this;
     }

@@ -3,6 +3,24 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+
+
+{#    {% if hasAnswer == false %}#}
+{#        <div>#}
+{#            <h2 class="text-white">{{ questions.0 }}</h2>#}
+{#        </div>#}
+{#        <div>#}
+{#            <a href="{{ path('user_hasAnswered') }}"><h2 class="text-white">{{ choices.question1.choice1 }}</h2></a>#}
+{#            <a href="{{ path('user_hasAnswered') }}"><h2 class="text-white">{{ choices.question1.choice2 }}</h2></a>#}
+
+{#            <a href="{{ path('user_hasAnswered', {user: user.id}) }}">#}
+{#        </div>#}
+{#    {% else %}#}
+{#        <div>#}
+{#            <h2 class="text-white">stats des réponce a la question</h2>#}
+{#        </div>#}
+{#    {% endif %}#}
+
     <div class="container-fluid fiverbg w-100 gradient-color">
         <div class="row m-5 align-content-center ">
             <div class="col-6 justify-content-center ">
@@ -14,27 +32,26 @@
                         <h1 >
                             Question 1
                         </h1>
-                        <p class="text-break px-5 ">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam.
-                        </p>
+                        <p class="text-break px-5 ">{{ questions.9.content }}</p>
                     </div>
                     <div class=" row text-center justify-content-center text-white">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
-                            <input type="checkbox"> <p>Réponse 1</p> </input>
-                        </div>
+                        {% if user.hasAnswered == false %}
+{#                        {% for choice in choices.9 %}#}
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                                <input type="checkbox"> <p>{{ choices.9.choice1 }}</p> </input>
+                            </div>
 
-                        <div class="col-md-5 button bg-danger mr-2  mb-2 pt-2 shadow ">
-                            <input type="checkbox"> <p>Réponse 2</p> </input>
-                        </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
-                            <input type="checkbox"> <p>Réponse 3</p> </input>
-                        </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow  ">
-                            <input type="checkbox"> <p>Réponse 4</p> </input>
-                        </div>
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                                <input type="checkbox"> <p>{{ choices.9.choice2 }}</p> </input>
+                            </div>
+{#                        {% endfor %}#}
+                        {% else %}
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                                <input type="checkbox"> <p>stats des réponce a la question</p> </input>
+                            </div>
+                        {% endif %}
+
                     </div>
                     <div class="text-center my-5">
                         <button type="submit" class="btn btn-success shadow rounded-pill">Poursuivre > </button>

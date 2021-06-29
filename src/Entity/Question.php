@@ -25,19 +25,19 @@ class Question
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Answer::class, inversedBy="question")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $answer;
-
-    /**
      * @ORM\OneToMany(targetEntity=Choice::class, mappedBy="question")
      */
     private $choice;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Answer::class, mappedBy="question")
+     */
+    private $answers;
+
     public function __construct()
     {
         $this->choice = new ArrayCollection();
+        $this->answers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -53,18 +53,6 @@ class Question
     public function setContent(string $content): self
     {
         $this->content = $content;
-
-        return $this;
-    }
-
-    public function getAnswer(): ?Answer
-    {
-        return $this->answer;
-    }
-
-    public function setAnswer(?Answer $answer): self
-    {
-        $this->answer = $answer;
 
         return $this;
     }
@@ -93,6 +81,36 @@ class Question
             // set the owning side to null (unless already changed)
             if ($choice->getQuestion() === $this) {
                 $choice->setQuestion(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Answer[]
+     */
+    public function getAnswers(): Collection
+    {
+        return $this->answers;
+    }
+
+    public function addAnswer(Answer $answer): self
+    {
+        if (!$this->answers->contains($answer)) {
+            $this->answers[] = $answer;
+            $answer->setQuestion($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnswer(Answer $answer): self
+    {
+        if ($this->answers->removeElement($answer)) {
+            // set the owning side to null (unless already changed)
+            if ($answer->getQuestion() === $this) {
+                $answer->setQuestion(null);
             }
         }
 
