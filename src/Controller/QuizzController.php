@@ -27,43 +27,28 @@ class QuizzController extends AbstractController
      */
     public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository, UserRepository $userRepository)
     {
-        $hasAnswer = false;
 
-        $question = $questionRepository->findAll();
-        $choice = $choiceRepository->findAll();
+        $questions = $questionRepository->findAll();
+        $choices = $choiceRepository->findAll();
 
-        $questions = [
-            0 => 'canard ou lapin ?',
-            1 => 'verre à moitié....',
-            2 => 'réseau social ?',
-            ];
-
-        $choices = [
-            'question1' => ['Canard', 'Lapin'],
-            'question2' => ['vide', 'plein'],
-            'question3' => ['facebook', 'twiter', 'insta', 'linkedin'],
-        ];
-
+        $user = $userRepository->findOneBy(['id' => 100]);
 
         return $this->render('quizz/quizz.html.twig', [
-            'question' => $question,
-            'choice' => $choice,
             'questions' => $questions,
             'choices' => $choices,
-            'hasAnswer' => $hasAnswer,
-           // 'user' => $userRepository->findOneBy($this->getUser()),
+            'user' => $user,
         ]);
     }
 
 
 //    /**
-//     * @Route("/quizz/user", name="user_hasAnswered")
+//     * @Route("/quizz/{user}", name="user_hasAnswered")
 //     */
 //    public function hasAnswered(EntityManagerInterface $entityManager, User $user): Response
 //    {
-//        $hasAnswer = true;
-//
-//        $user = $hasAnswer;
+//        $user->setHasAnswered(!$user->getHasAnswered());
+//        $entityManager->persist($user);
+//        $entityManager->flush();
 //
 //        return $this->redirectToRoute('quizz');
 //    }

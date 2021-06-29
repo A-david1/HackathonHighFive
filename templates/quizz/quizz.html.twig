@@ -32,15 +32,25 @@
                         <h1 >
                             Question 1
                         </h1>
-                        <p class="text-break px-5 ">{{ questions.0 }}</p>
+                        <p class="text-break px-5 ">{{ questions.9.content }}</p>
                     </div>
                     <div class=" row text-center justify-content-center text-white">
 
-                        {% for choice in choices %}
+                        {% if user.hasAnswered == false %}
+{#                        {% for choice in choices.9 %}#}
                             <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
-                                <input type="checkbox"> <p>{{ choice }}</p> </input>
+                                <input type="checkbox"> <p>{{ choices.9.choice1 }}</p> </input>
                             </div>
-                        {% endfor %}
+
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                                <input type="checkbox"> <p>{{ choices.9.choice2 }}</p> </input>
+                            </div>
+{#                        {% endfor %}#}
+                        {% else %}
+                            <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow ">
+                                <input type="checkbox"> <p>stats des réponce a la question</p> </input>
+                            </div>
+                        {% endif %}
 
                     </div>
                     <div class="text-center my-5">
