@@ -11,14 +11,6 @@ use Doctrine\Persistence\ObjectManager;
 
 class UserFixtures extends Fixture
 {
-    public const RATING = [
-        1,
-        2,
-        3,
-        4,
-        5,
-    ];
-
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create();
@@ -28,21 +20,12 @@ class UserFixtures extends Fixture
             $user->setPseudo($faker->name);
             $user->setJob($faker->jobTitle);
             $user->setCountry($faker->country);
-            $user->setRating(rand(self::RATING));
+            $user->setRating(rand(1, 5));
             $user->setDescription($faker->sentence);
-            $user->setResultMatching();
-            $user->setAnswer();
-
+            $user->setHasAnswered(true);
+            $this->addReference('user_' . $i, $user);
             $manager->persist($user);
         }
         $manager->flush();
-    }
-
-    public function getDependencies()
-    {
-        return [
-            AnswerFixtures::class,
-            ResultMatchingFixtures::class,
-        ];
     }
 }
