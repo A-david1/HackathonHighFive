@@ -18,8 +18,8 @@ class AnswerFixtures extends Fixture implements DependentFixtureInterface
             for ($q = 1; $q < 10; $q++) {
 
                 $answer = new Answer();
-                $answer->addUser($this->getReference('user_' . $i));
-                $answer->addQuestion($this->getReference('question_' . rand(1,10)));
+                $answer->setUser($this->getReference('user_' . $i));
+                $answer->setQuestion($this->getReference('question_' . rand(1,10)));
                 if ($q < 5) {
                     $answer->setAnswer(rand(0, 1));
                 } else {

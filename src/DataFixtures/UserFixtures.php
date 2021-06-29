@@ -3,7 +3,6 @@
 
 namespace App\DataFixtures;
 
-
 use App\Entity\User;
 use Faker\Factory;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -22,7 +21,7 @@ class UserFixtures extends Fixture
             $user->setCountry($faker->country);
             $user->setRating(rand(1, 5));
             $user->setDescription($faker->sentence);
-            $user->setHasAnswered(true);
+            $user->setHasAnswered(false);
             $this->addReference('user_' . $i, $user);
             $manager->persist($user);
         }
