@@ -3,14 +3,14 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <div class="container-fluid fiverbg w-100 gradient-color">
+    <div class="container-fluid w-100 h-100 gradient-color">
         <div class="row m-5 align-content-center ">
             <div class="col-6 justify-content-center ">
-                <div class="question1" id="div-question">
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
-                    <div class="p-3 text-center text-white">
+                    <div class="p-3 text-center text-white ">
                         <h1>
                             Question 1
                         </h1>
@@ -19,33 +19,37 @@
                         </p>
                     </div>
                     <div class="row text-center justify-content-center text-white check-radio">
-                        <div class="answers col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            <h3>{{ choices.0.choice1 }}</h3>
-                            <div class="w-100 h-100 form-check-input ">
-                            </div>
-                        </div>
 
-                        <div class="answers col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question2" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.0.choice1 }}</h3>
+                                <div class="w-100 h-100 form-check-input ">
+                                </div>
+                        </a>
+
+
+                        <a href="#Question2" class=" col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="answers col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+
+                        <a href="#Question2" class=" col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="answers col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question2"  class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q2 -->
-                <div class="question2" id="div-question">
+                <a id="Question2"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -59,33 +63,34 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
-                        </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
-                            <a href=""></a>
+                        </a>
+                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+
                             <h3>{{ choices.1.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q3 -->
-                <div class="question3" id="div-question">
+                <a id="Question3"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -99,33 +104,33 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        </a>
+                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
-
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q4 -->
-                <div class="question4" id="div-question">
+                <a id="Question4"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -138,33 +143,34 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!--  Q5 -->
-                <div class="question5" id="div-question">
+                <a id="Question5"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -178,33 +184,34 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q6 -->
-                <div class="question6" id="div-question">
+                <a id="Question6"></a>
+                <div class="question">
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -218,21 +225,22 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question7" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question7" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q7 -->
-                <div class="question7" id="div-question">
+                <a id="Question7"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -245,22 +253,23 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question8" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.6.choice1 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question8" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.6.choice2 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Q8 -->
-                <div class="question8" id="div-question">
+                <a id="Question8"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -274,21 +283,22 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question9" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.7.choice1 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question9" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.7.choice2 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q9 -->
-                <div class="question9" id="div-question">
+                <a id="Question9"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -302,21 +312,22 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question10" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.8.choice1 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#Question10" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.8.choice2 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Q10 -->
-                <div class="question10" id="div-question">
+                <a id="Question10"></a>
+                <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
                     </div>
@@ -330,23 +341,140 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#QuestionResult" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.9.choice1 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="col-md-5 button w-50 bg-danger mr-2 mb-2 pt-2 shadow checkbox-radio">
+                        <a href="#QuestionResult" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.9.choice2 }}
                             <div class="w-100 h-100 form-check-input ">
                             </div>
+                        </a>
+                    </div>
+                </div>
+                <a id="QuestionResult"></a>
+                <h2 class="mb-5 text-white">Results of the quizz</h2>
+                <div class="align-self-center print-result p-3">
+                    <div class="row">
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 1</h3>
+                        <div class="d-flex align-items-end">
+                            <div class="rquestionsA m-3 mt-5 ">
+                                <p> 60%</p>
+                            </div>
+                            <div class="rquestionsB m-3 mt-5 ">
+                                <p> 40%</p>
+                            </div>
+                           </div>
                         </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 2</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 3</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 4</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 5</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 6</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 7</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 8</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 9</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-3">
+                            <h3 class="text-center"> Question 10</h3>
+                            <div class="d-flex align-items-end">
+                                <div class="rquestionsA m-3 mt-5 ">
+                                    <p> 60%</p>
+                                </div>
+                                <div class="rquestionsB m-3 mt-5 ">
+                                    <p> 40%</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
         </div>
 
-        <div class="col-6 p-3">
-            <div class="example-wrapper">
+        <div class="col-6 pt-3">
+            <div class="example-wrapper sticky-top ">
                 <!-- clouds -->
                 <div class="container-planet">
                     <!-- stars -->
@@ -412,8 +540,10 @@
                     <div class="ring-bigger-after"></div>
 
                 </div>
+
             </div>
         </div>
+
     </div>
 
     </div>
