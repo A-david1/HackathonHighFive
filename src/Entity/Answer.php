@@ -69,7 +69,6 @@ class Answer
     {
         if (!$this->user->contains($user)) {
             $this->user[] = $user;
-            $user->setAnswer($this);
         }
 
         return $this;
@@ -99,7 +98,6 @@ class Answer
     {
         if (!$this->question->contains($question)) {
             $this->question[] = $question;
-            $question->setAnswer($this);
         }
 
         return $this;

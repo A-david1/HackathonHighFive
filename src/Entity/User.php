@@ -48,16 +48,9 @@ class User
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Answer::class, inversedBy="user")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(type="boolean")
      */
-    private $answer;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=ResultMatching::class, inversedBy="mentor")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $resultMatching;
+    private $hasAnswered;
 
     public function getId(): ?int
     {
@@ -136,26 +129,14 @@ class User
         return $this;
     }
 
-    public function getAnswer(): ?Answer
+    public function getHasAnswered(): ?bool
     {
-        return $this->answer;
+        return $this->hasAnswered;
     }
 
-    public function setAnswer(?Answer $answer): self
+    public function setHasAnswered(bool $hasAnswered): self
     {
-        $this->answer = $answer;
-
-        return $this;
-    }
-
-    public function getResultMatching(): ?ResultMatching
-    {
-        return $this->resultMatching;
-    }
-
-    public function setResultMatching(?ResultMatching $resultMatching): self
-    {
-        $this->resultMatching = $resultMatching;
+        $this->hasAnswered = $hasAnswered;
 
         return $this;
     }
