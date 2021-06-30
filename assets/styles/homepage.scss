@@ -1,0 +1,14 @@
+.robot-homepage {
+  height:80%;
+}
+
+.button-home {
+  border-radius: 50px;
+  background-color: #20bb88;
+  font-size: 2rem;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    background-color: #00732e;
+  }
+}

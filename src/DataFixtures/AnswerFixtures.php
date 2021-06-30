@@ -23,7 +23,7 @@ class AnswerFixtures extends Fixture implements DependentFixtureInterface, Conta
     public function load(ObjectManager $manager)
     {
         $serializer = $this->container->get('serializer');
-        $filepath = '/home/olivierjoubert/HackathonHighFive/assets/images/data/individual_data.csv';
+        $filepath = '/home/antoine/hackthon/HackathonHighFive/assets/images/data/individual_data.csv';
         $data = $serializer->decode(file_get_contents($filepath), 'csv');
 
         for ($i = 1; $i <= 16; $i++) {
