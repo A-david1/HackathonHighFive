@@ -26,9 +26,9 @@ class TestController extends AbstractController
      */
     public function testml(mlProcessor $mlProcessor): Response
         {
-            $mlProcessor->createDATA();
+            $fortest = $mlProcessor->createDATA();
 
-            $mlProcessor->mlpreprocessing();
+            $mlProcessor->mlpreprocessing($fortest);
 
 
 
