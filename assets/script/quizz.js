@@ -1,4 +1,5 @@
 const answers = document.getElementsByClassName('answers');
+const questions = document.getElementsByClassName('question');
 
 for (let i = 0; i < answers.length; i++) {
     answers[i].addEventListener('click', () => {
@@ -14,6 +15,12 @@ for (let i = 0; i < answers.length; i++) {
 
         fetch(answers[i].dataset.path, userpick)
             .then(response => response.json())
-            .then (response => console.log(response))
+            .then (response => {
+                console.log(response)
+                questions[i].scrollIntoView({behavior: "smooth"})
+            })
+
     });
 }
+
+
