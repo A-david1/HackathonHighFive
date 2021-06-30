@@ -67,7 +67,7 @@ class ChoiceFixtures extends Fixture implements DependentFixtureInterface
 
             $choice = new Choice();
             $choice->setChoice1('Nomad');
-            $choice->setChoice2('Sendentary');
+            $choice->setChoice2('Sedentary');
             $choice->setQuestion($this->getReference('question_8'));
             $manager->persist($choice);
 
