@@ -6,6 +6,7 @@
     <div class="container-fluid w-100 h-100 gradient-color">
         <div class="row m-5 align-content-center ">
             <div class="col-6 justify-content-center ">
+                {{ dump(totalStatAnswer) }}
                 <div class="question" >
                     <div>
                         <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
@@ -18,7 +19,7 @@
                             {{ questions.0.content }}
                         </p>
                     </div>
-                    <div class="row text-center justify-content-center text-white check-radio">
+                    <div class="row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question2" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice1 }}</h3>
@@ -46,6 +47,50 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+
+{#                                {% for answer in answers %}#}
+{#                                    {% if answer == 'The human side' %}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.0 }} des membres FIVERR ont aussi répondu {{ choices.0.choice1 }}</p>#}
+{#                                    {% elseif  answer == 'Specifications'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.1 }} des membres FIVERR ont aussi répondu {{ choices.0.choice2 }}</p>7#}
+{#                                    {% elseif  answer == 'Technologies'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.2 }} des membres FIVERR ont aussi répondu {{ choices.0.choice3 }}</p>#}
+{#                                    {% elseif  answer == 'The paycheck'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.3 }} des membres FIVERR ont aussi répondu {{ choices.0.choice4 }}</p>#}
+{#                                    {% endif %}#}
+{#                                {% endfor %}#}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q2 -->
                 <a id="Question2"></a>
@@ -61,7 +106,7 @@
                             {{ questions.1.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice1 }}</h3>
@@ -87,6 +132,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q3 -->
                 <a id="Question3"></a>
@@ -102,7 +179,7 @@
                             {{ questions.2.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice1 }}</h3>
@@ -127,6 +204,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q4 -->
                 <a id="Question4"></a>
@@ -142,7 +251,7 @@
                             {{ questions.3.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
                         <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
@@ -167,6 +276,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--  Q5 -->
                 <a id="Question5"></a>
@@ -182,7 +323,7 @@
                             {{ questions.4.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice1 }}</h3>
@@ -208,6 +349,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q6 -->
                 <a id="Question6"></a>
@@ -223,7 +396,7 @@
                             {{ questions.5.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question7" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice1 }}</h3>
@@ -236,6 +409,26 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Q7 -->
@@ -252,7 +445,7 @@
                             {{ questions.6.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
                         <a href="#Question8" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.6.choice1 }}
                             <div class="w-100 h-100 form-check-input ">
@@ -264,6 +457,26 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -281,7 +494,7 @@
                             {{ questions.7.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question9" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.7.choice1 }}
@@ -294,6 +507,26 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Q9 -->
@@ -310,7 +543,7 @@
                             {{ questions.8.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question10" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.8.choice1 }}
@@ -323,6 +556,26 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Q10 -->
@@ -339,7 +592,7 @@
                             {{ questions.9.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#QuestionResult" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             {{ choices.9.choice1 }}
@@ -352,6 +605,26 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <a id="QuestionResult"></a>
@@ -367,7 +640,7 @@
                             <div class="rquestionsB m-3 mt-5 ">
                                 <p> 40%</p>
                             </div>
-                           </div>
+                        </div>
                         </div>
                         <div class=" col-3">
                             <h3 class="text-center"> Question 2</h3>
@@ -509,12 +782,15 @@
                         </div>
                     </div>
                     <!-- 1st orbit -->
-                    <div class="orbit orbit1-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
+{#                    {% for tauxCompatibility in 90..100 %}#}
+{#                        <p>{{ tauxCompatibility }}</p>#}
+                        <div class="orbit orbit1-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
+{#                    {% endfor %}#}
 
                     <!-- 2nd orbit -->
                     <div class="orbit orbit2-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
