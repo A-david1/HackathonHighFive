@@ -1,0 +1,19 @@
+.robot-information{
+  height: 80%;
+}
+
+.text-box{
+  width: 500px;
+  font-size: 1.4em;
+}
+.button-presentation {
+border-radius: 50px;
+background-color: #20bb88;
+font-size: 2rem;
+text-decoration: none;
+  width: 300px;
+&:hover{
+  text-decoration: none;
+  background-color: #00732e;
+}
+}

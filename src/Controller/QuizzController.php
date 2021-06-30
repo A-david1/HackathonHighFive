@@ -255,4 +255,17 @@ class QuizzController extends AbstractController
 
         return $this->render('quizz/results.html.twig');
     }
+
+    /**
+     * @Route("/quizz/choice/{id}/", name="quizz_choice")
+     */
+    public function searchCompatibility(Choice $choice, Request $request): Response
+    {
+        $data = $request->getUri();
+        dd($choice);
+        // Search Compatibility with Rubix
+        return $this->json([
+            "data" => $data,
+        ]);
+    }
 }
