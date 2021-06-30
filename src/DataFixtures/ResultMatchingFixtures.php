@@ -14,8 +14,8 @@ class ResultMatchingFixtures extends Fixture implements DependentFixtureInterfac
     public function load(ObjectManager $manager)
     {
 
-        for($i = 1; $i < 100; $i++){
-            for($j = 1; $j < 100; $j++){
+        for($i = 1; $i < 17; $i++){
+            for($j = 1; $j < 17; $j++){
                 $resultMatching = new ResultMatching();
                 $resultMatching->addMentor($this->getReference('user_' . $i));
                 $resultMatching->addApprentice($this->getReference('user_' . $j));

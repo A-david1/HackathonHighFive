@@ -1,5 +1,6 @@
 const answers = document.getElementsByClassName('answers');
 
+
 for (let i = 0; i < answers.length; i++) {
     answers[i].addEventListener('click', () => {
         event.preventDefault();
@@ -15,5 +16,8 @@ for (let i = 0; i < answers.length; i++) {
         fetch(answers[i].dataset.path, userpick)
             .then(response => response.json())
             .then (response => console.log(response))
+
+
+
     });
 }
