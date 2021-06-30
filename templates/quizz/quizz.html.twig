@@ -6,6 +6,7 @@
     <div class="container-fluid w-100 h-100 gradient-color">
         <div class="row m-5 align-content-center ">
             <div class="col-6 justify-content-center ">
+                {{ dump(totalStatAnswer) }}
                 <div class="question" >
                     <div class="p-3 text-center text-white ">
                         <img class="image-fluid" src="{{ asset('build/images/robot-pak-1.png')}}" alt="" width="300px">
@@ -16,7 +17,7 @@
                             {{ questions.0.content }}
                         </p>
                     </div>
-                    <div class="row text-center justify-content-center text-white check-radio">
+                    <div class="row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question2" data-choice="{{ choices.0.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -46,6 +47,50 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.1 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.2 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.3 }}%</div>
+                                    </div>
+                                </div>
+
+{#                                {% for answer in answers %}#}
+{#                                    {% if answer == 'The human side' %}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.0 }} des membres FIVERR ont aussi répondu {{ choices.0.choice1 }}</p>#}
+{#                                    {% elseif  answer == 'Specifications'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.1 }} des membres FIVERR ont aussi répondu {{ choices.0.choice2 }}</p>7#}
+{#                                    {% elseif  answer == 'Technologies'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.2 }} des membres FIVERR ont aussi répondu {{ choices.0.choice3 }}</p>#}
+{#                                    {% elseif  answer == 'The paycheck'%}#}
+{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.3 }} des membres FIVERR ont aussi répondu {{ choices.0.choice4 }}</p>#}
+{#                                    {% endif %}#}
+{#                                {% endfor %}#}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q2 -->
                 <a id="Question2"></a>
@@ -59,7 +104,7 @@
                             {{ questions.1.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question3" data-choice="{{ choices.1.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -88,6 +133,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.1 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 1%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.3 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q3 -->
                 <a id="Question3"></a>
@@ -101,7 +178,7 @@
                             {{ questions.2.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question4" data-choice="{{ choices.2.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -129,6 +206,38 @@
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.1 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.2 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.3 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Q4 -->
@@ -172,6 +281,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.1 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.2 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.3 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--  Q5 -->
                 <a id="Question5"></a>
@@ -185,7 +326,7 @@
                             {{ questions.4.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question6" data-choice="{{ choices.4.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -215,6 +356,38 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.1 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.2 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 4</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.3 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q6 -->
                 <a id="Question6"></a>
@@ -243,6 +416,26 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.1 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q7 -->
                 <a id="Question7"></a>
@@ -257,19 +450,39 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <a href="#Question8" data-choice="{{ choices.6.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#Question8" data-choice="K2000" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <img src="{{ choices.6.choice1 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question8" data-choice="{{ choices.6.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#Question8" data-choice="Dolorean" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <img src="{{ choices.6.choice2 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
+                    </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.1 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -285,7 +498,7 @@
                             {{ questions.7.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question9"  data-choice="{{ choices.7.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -301,6 +514,26 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.1 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q9 -->
                 <a id="Question9"></a>
@@ -315,7 +548,7 @@
                             <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/14/12/duck-rabbit.png" class="img-fluid mt-2 ml-2" width="300px">
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#Question10" data-choice="{{ choices.8.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -331,6 +564,26 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.1 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Q10 -->
                 <a id="Question10"></a>
@@ -344,7 +597,7 @@
                             {{ questions.9.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio">
+                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
                         <a href="#QuestionResult" data-choice="{{ choices.9.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
@@ -360,123 +613,30 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-8 card text-center mx-auto">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
+                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
+                            <div class="text-center">
+                                <div class="mx-auto">
+                                    <p>réponce 1</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.0 }}%</div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto">
+                                    <p>réponce 2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.1 }}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <a id="QuestionResult"></a>
                 <h2 class="mb-5 text-white">Results of the quizz</h2>
                 <div class="align-self-center print-result p-3">
-                    <div class="row">
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 1</h3>
-                        <div class="d-flex align-items-end">
-                            <div class="rquestionsA m-3 mt-5 ">
-                                <p> 60%</p>
-                            </div>
-                            <div class="rquestionsB m-3 mt-5 ">
-                                <p> 40%</p>
-                            </div>
-                           </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 2</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 3</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 4</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 5</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 6</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 7</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 8</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 9</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" col-3">
-                            <h3 class="text-center"> Question 10</h3>
-                            <div class="d-flex align-items-end">
-                                <div class="rquestionsA m-3 mt-5 ">
-                                    <p> 60%</p>
-                                </div>
-                                <div class="rquestionsB m-3 mt-5 ">
-                                    <p> 40%</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
         </div>
 
@@ -516,12 +676,15 @@
                         </div>
                     </div>
                     <!-- 1st orbit -->
-                    <div class="orbit orbit1-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit1-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
+{#                    {% for tauxCompatibility in 90..100 %}#}
+{#                        <p>{{ tauxCompatibility }}</p>#}
+                        <div class="orbit orbit1-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
+                        <div class="orbit orbit1-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
+{#                    {% endfor %}#}
 
                     <!-- 2nd orbit -->
                     <div class="orbit orbit2-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>

@@ -272,3 +272,8 @@ body {
   }
 }
 
+.card {
+  background: linear-gradient(-45deg, $bg-light, $bg-semi, $bg-middle, $bg-dark);
+  animation: daylight 15s ease infinite;
+}
+
