@@ -259,13 +259,30 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/choice/{id}/", name="quizz_choice")
      */
-    public function searchCompatibility(Choice $choice, Request $request): Response
+    public function searchCompatibility(Request $request): Response
     {
-        $data = $request->getUri();
-        dd($choice);
+        $entityBody = file_get_contents('php://input');
+        $session = $request->getSession();
+        $session->set('choice', $entityBody);
         // Search Compatibility with Rubix
         return $this->json([
-            "data" => $data,
+            "data" => $entityBody,
         ]);
+    }
+
+    /**
+     * @Route("/dd", name="session_destroy")
+     */
+    public function sessionDestroy()
+    {
+        session_destroy();
+    }
+    /**
+     * @Route("/session", name="session")
+     */
+    public function checkSession(Request $request)
+    {
+        $session = $request->getSession();
+     dd($session->get('choice'));
     }
 }

@@ -4,14 +4,17 @@ for (let i = 0; i < answers.length; i++) {
     answers[i].addEventListener('click', () => {
         event.preventDefault();
 
-        let answerContent = answers[i].dataset;
-        let answerLink = event.currentTarget;
-        let link = answerLink.href;
-        console.log(answerContent);
-        fetch(link,  {method: 'POST'})
-            .then(res => res.json())
-            .then(data => console.log(data))
+        const userpick = {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: answers[i].dataset.choice,
+        }
+
+        fetch(answers[i].dataset.path, userpick)
+            .then(response => response.json())
+            .then (response => console.log(response))
     });
 }
-
 //TODO function change avatar with RubixData
