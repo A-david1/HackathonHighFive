@@ -26,11 +26,17 @@ class TestController extends AbstractController
      */
     public function testml(mlProcessor $mlProcessor): Response
         {
+            $mlProcessor->createDATA();
+
             $mlProcessor->mlpreprocessing();
+
+
 
 
             return $this->render('test/testml.html.twig', [
                 'controller_name' => 'TestController',
             ]);
         }
+
+
 }
