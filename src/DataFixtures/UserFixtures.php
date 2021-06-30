@@ -13,9 +13,9 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create();
-        for ($i = 1; $i < 100; $i++){
+        for ($i = 1; $i < 17; $i++){
             $user = new User();
-            $user->setAvatar($faker->image());
+            $user->setAvatar('avatar' . $i . 'png');
             $user->setPseudo($faker->name);
             $user->setJob($faker->jobTitle);
             $user->setCountry($faker->country);
