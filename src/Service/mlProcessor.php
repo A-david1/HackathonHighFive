@@ -22,7 +22,7 @@ class mlProcessor
 {
     public function mlpreprocessing($fortest) {
         $training = Labeled::fromIterator(new CSV(
-            '/home/olivierjoubert/HackathonHighFive/assets/images/data/labeled_train.csv'))
+            'build/images/data/labeled_train.csv'))
             ->apply(new NumericStringConverter());
 
 
@@ -47,7 +47,7 @@ class mlProcessor
 
     public function createDATA()
     {
-        $csv = array_map('str_getcsv', file('/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'));
+        $csv = array_map('str_getcsv', file('build/images/data/unlabeled_fakedtest.csv'));
 
         for ($i = 0; $i < 16; $i++) {
             for ($j=0; $j< 10; $j++) {
