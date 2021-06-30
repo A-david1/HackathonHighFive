@@ -26,7 +26,7 @@ class mlProcessor
             ->apply(new NumericStringConverter());
 
         $testing = Unlabeled::fromIterator(new CSV(
-           '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'))
+           '/home/olivierjoubert/HackathonHighFive/assets/images/data/TestNAN.csv'))
             ->apply(new NumericStringConverter());
 
         $estimator = new NaiveBayes();
@@ -37,6 +37,22 @@ class mlProcessor
         $probabilities = $estimator->proba($testing);
         return $probabilities;
     }
+
+    public function createDATA()
+    {
+        $csv = array_map('str_getcsv', file('/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'));
+
+        for ($i = 0; $i < 16; $i++) {
+            for ($j=0; $j< 10; $j++) {
+                $csv[$i][$j] = 'NAN';
+            }
+        }
+        return $csv;
+
+
+
+    }
+
 
 
 

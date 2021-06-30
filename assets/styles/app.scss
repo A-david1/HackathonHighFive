@@ -7,5 +7,17 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import "quizzquestions.css";
 @import 'test';
+@import 'homepage';
+@import "informations";
+
+@font-face {
+  font-family: DomaineDisplay;
+  src: url('/assets/styles/fonts/DomaineDisplay-Medium.otf') format('opentype');
+}
+
+html, body{
+  font-family: DomaineDisplay;
+}
+
 
 

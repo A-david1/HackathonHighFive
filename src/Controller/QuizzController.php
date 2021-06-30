@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Answer;
 use App\Entity\Choice;
+use App\Entity\Question;
 use App\Form\ChoiceType;
 use App\Service\stat;
 use Doctrine\ORM\EntityManager;
@@ -18,6 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class QuizzController extends AbstractController
 {
@@ -61,5 +63,38 @@ class QuizzController extends AbstractController
         return $this->render('quizz/quizz.html.twig', [
             'tauxCompatibility' => $tauxCompatibility,
         ]);
+    }
+
+    /**
+     * @Route("/quizz/choice/{id}/", name="quizz_choice")
+     */
+
+    public function searchCompatibility(Request $request): Response
+    {
+        $entityBody = file_get_contents('php://input');
+        $session = $request->getSession();
+        $session->set('choice', $entityBody);
+        // Search Compatibility with Rubix
+        return $this->json([
+            "data" => $entityBody,
+        ]);
+    }
+
+
+    /**
+     * @Route("/dd", name="session_destroy")
+     */
+    public function sessionDestroy()
+    {
+        session_destroy();
+    }
+
+    /**
+     * @Route("/session", name="session")
+     */
+    public function checkSession(Request $request)
+    {
+        $session = $request->getSession();
+     dd($session->get('choice'));
     }
 }

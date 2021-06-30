@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Quizz Fiverr{% endblock %}
 
 {% block body %}
     <div class="container-fluid w-100 h-100 gradient-color">
@@ -8,10 +8,8 @@
             <div class="col-6 justify-content-center ">
                 {{ dump(totalStatAnswer) }}
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white ">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-pak-1.png')}}" alt="" width="300px">
                         <h1>
                             Question 1
                         </h1>
@@ -21,27 +19,29 @@
                     </div>
                     <div class="row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question2" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question2" data-choice="{{ choices.0.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice1 }}</h3>
                                 <div class="w-100 h-100 form-check-input ">
                                 </div>
                         </a>
 
-
-                        <a href="#Question2" class=" col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question2"  data-choice="{{ choices.0.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-
-                        <a href="#Question2" class=" col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question2" data-choice="{{ choices.0.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question2"  class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question2" data-choice="{{ choices.0.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -95,10 +95,8 @@
                 <!-- Q2 -->
                 <a id="Question2"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-en-1.png')}}" alt="" width="300px">
                         <h1>
                             Question 2
                         </h1>
@@ -108,25 +106,28 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question3" data-choice="{{ choices.1.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question3" data-choice="{{ choices.1.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice2 }}</h3>
-                            <div class="w-100 h-100 form-check-input ">
+                            <div class="w-100 h-100 form-check-input">
                             </div>
                         </a>
 
-                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question3" data-choice="{{ choices.1.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
-                        <a href="#Question3" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-
+                        <a href="#Question3" data-choice="{{ choices.1.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -168,10 +169,8 @@
                 <!-- Q3 -->
                 <a id="Question3"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-fr-1.png')}}" alt="" width="300px">
                         <h1>
                             Question 3
                         </h1>
@@ -181,24 +180,28 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question4" data-choice="{{ choices.2.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
-                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question4" data-choice="{{ choices.2.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question4" data-choice="{{ choices.2.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question4" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question4" data-choice="{{ choices.2.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -240,10 +243,8 @@
                 <!-- Q4 -->
                 <a id="Question4"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-pak-3.png')}}" alt="" width="300px">
                         <h1>
                             Question 4
                         </h1>
@@ -251,26 +252,30 @@
                             {{ questions.3.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
-                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                    <div class=" row text-center justify-content-center text-white check-radio">
+                        <a href="#Question5" data-choice="{{ choices.3.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question5" data-choice="{{ choices.3.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question5" data-choice="{{ choices.3.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question5" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question5" data-choice="{{ choices.3.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -312,10 +317,8 @@
                 <!--  Q5 -->
                 <a id="Question5"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-en-4.png')}}" alt="" width="300px">
                         <h1>
                             Question 5
                         </h1>
@@ -325,25 +328,29 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question6" data-choice="{{ choices.4.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question6" data-choice="{{ choices.4.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question6" data-choice="{{ choices.4.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question6" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question6" data-choice="{{ choices.4.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -385,10 +392,8 @@
                 <!-- Q6 -->
                 <a id="Question6"></a>
                 <div class="question">
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-fr-2.png')}}" alt="" width="300px">
                         <h1>
                             Question 6
                         </h1>
@@ -396,15 +401,16 @@
                             {{ questions.5.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
-
-                        <a href="#Question7" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                    <div class=" row text-center justify-content-center text-white check-radio">
+                        <a href="#Question7" data-choice="{{ choices.5.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question7" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                        <a href="#Question7" data-choice="{{ choices.5.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
@@ -434,10 +440,8 @@
                 <!-- Q7 -->
                 <a id="Question7"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-pak-4.png')}}" alt="" width="300px">
                         <h1>
                             Question 7
                         </h1>
@@ -445,15 +449,17 @@
                             {{ questions.6.content }}
                         </p>
                     </div>
-                    <div class=" row text-center justify-content-center text-white check-radio pb-5">
-                        <a href="#Question8" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.6.choice1 }}
+                    <div class=" row text-center justify-content-center text-white check-radio">
+                        <a href="#Question8" data-choice="{{ choices.6.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <img src="{{ choices.6.choice1 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question8" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.6.choice2 }}
+                        <a href="#Question8" data-choice="{{ choices.6.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <img src="{{ choices.6.choice2 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
@@ -483,10 +489,8 @@
                 <!-- Q8 -->
                 <a id="Question8"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-en-3.png')}}" alt="" width="300px">
                         <h1>
                             Question 8
                         </h1>
@@ -496,14 +500,16 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question9" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.7.choice1 }}
+                        <a href="#Question9"  data-choice="{{ choices.7.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.7.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question9" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.7.choice2 }}
+                        <a href="#Question9" data-choice="{{ choices.7.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.7.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
@@ -532,27 +538,28 @@
                 <!-- Q9 -->
                 <a id="Question9"></a>
                 <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-fr-4.png')}}" alt="" width="300px">
                         <h1>
                             Question 9
                         </h1>
                         <p class="text-break px-5 ">
                             {{ questions.8.content }}
+                            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/14/12/duck-rabbit.png" class="img-fluid mt-2 ml-2" width="300px">
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question10" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.8.choice1 }}
+                        <a href="#Question10" data-choice="{{ choices.8.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.8.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question10" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.8.choice2 }}
+                        <a href="#Question10" data-choice="{{ choices.8.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.8.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
@@ -580,11 +587,9 @@
                 </div>
                 <!-- Q10 -->
                 <a id="Question10"></a>
-                <div class="question" >
-                    <div>
-                        <img class="image-fluid w-100" src="{{ asset('images/robot1.png')}}" alt="">
-                    </div>
+                <div class="question">
                     <div class="p-3 text-center text-white">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-pak-1.png')}}" alt="" width="300px">
                         <h1>
                             Question 10
                         </h1>
@@ -594,14 +599,16 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#QuestionResult" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.9.choice1 }}
+                        <a href="#QuestionResult" data-choice="{{ choices.9.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.9.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#QuestionResult" class="col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
-                            {{ choices.9.choice2 }}
+                        <a href="#QuestionResult" data-choice="{{ choices.9.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                           class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
+                            <h3>{{ choices.9.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
