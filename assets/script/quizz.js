@@ -17,5 +17,3 @@ for (let i = 0; i < answers.length; i++) {
             .then (response => console.log(response))
     });
 }
-
-
