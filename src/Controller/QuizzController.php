@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Answer;
 use App\Entity\Choice;
+use App\Entity\Question;
 use App\Form\ChoiceType;
 use Doctrine\ORM\EntityManager;
 use App\Entity\User;
@@ -17,6 +18,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class QuizzController extends AbstractController
 {
@@ -259,6 +261,7 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/choice/{id}/", name="quizz_choice")
      */
+
     public function searchCompatibility(Request $request): Response
     {
         $entityBody = file_get_contents('php://input');
@@ -270,6 +273,7 @@ class QuizzController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/dd", name="session_destroy")
      */
@@ -277,6 +281,7 @@ class QuizzController extends AbstractController
     {
         session_destroy();
     }
+
     /**
      * @Route("/session", name="session")
      */
