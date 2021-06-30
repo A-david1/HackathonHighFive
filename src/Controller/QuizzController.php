@@ -4,11 +4,6 @@ namespace App\Controller;
 
 
 use App\Entity\Answer;
-use App\Entity\Choice;
-use App\Entity\Question;
-use App\Form\ChoiceType;
-use Doctrine\ORM\EntityManager;
-use App\Entity\User;
 use App\Repository\AnswerRepository;
 use App\Repository\ChoiceRepository;
 use App\Repository\QuestionRepository;
@@ -19,6 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
+use App\Service\mlProcessor;
 
 class QuizzController extends AbstractController
 {
@@ -33,10 +29,10 @@ class QuizzController extends AbstractController
     /**
      * @Route("/quizz/question", name="quizz")
      */
-    public function quizz(QuestionRepository $questionRepository, ChoiceRepository $choiceRepository)
+    public function quizz(QuestionRepository $questionRepository,
+                          ChoiceRepository $choiceRepository)
     {
-
-        $questions = $questionRepository->findAll();
+                $questions = $questionRepository->findAll();
         $choices = $choiceRepository->findAll();
 
         return $this->render('quizz/quizz.html.twig', [
@@ -253,7 +249,7 @@ class QuizzController extends AbstractController
 //        $user = $userRepository->findOneBy(['id' => 5]);
 
 
-        dd($answer);
+
 
         return $this->render('quizz/results.html.twig');
     }
@@ -262,14 +258,29 @@ class QuizzController extends AbstractController
      * @Route("/quizz/choice/{id}/", name="quizz_choice")
      */
 
-    public function searchCompatibility(Request $request): Response
+    public function searchCompatibility(Request $request, mlProcessor $mlProcessor): Response
     {
         $entityBody = file_get_contents('php://input');
         $session = $request->getSession();
-        $session->set('choice', $entityBody);
+        $rubix_array = $session->get('rubix');
+        $turn = $session->get('turn');
+        $nbpeople = count($rubix_array);
+
+
+        for ($i=0; $i< $nbpeople; $i++) {
+            $turn = $session->get('turn');
+            $rubix_array[$i][$turn] = $entityBody;
+        }
+        $session->set('rubix',$rubix_array);
+        $turn = $turn +1;
+        $session->set('turn', $turn);
+
+        $probabilities = $mlProcessor->mlpreprocessing($rubix_array);
+
         // Search Compatibility with Rubix
         return $this->json([
-            "data" => $entityBody,
+            "data" => $probabilities,
+
         ]);
     }
 
@@ -280,6 +291,7 @@ class QuizzController extends AbstractController
     public function sessionDestroy()
     {
         session_destroy();
+        return $this->redirectToRoute('home');
     }
 
     /**
@@ -288,6 +300,6 @@ class QuizzController extends AbstractController
     public function checkSession(Request $request)
     {
         $session = $request->getSession();
-     dd($session->get('choice'));
+     dd($session->get('rubix'));
     }
 }

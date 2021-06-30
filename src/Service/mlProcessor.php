@@ -20,14 +20,20 @@ use Rubix\ML\CrossValidation\Reports\MulticlassBreakdown;
 
 class mlProcessor
 {
-    public function mlpreprocessing() {
+    public function mlpreprocessing($fortest) {
         $training = Labeled::fromIterator(new CSV(
             '/home/olivierjoubert/HackathonHighFive/assets/images/data/labeled_train.csv'))
             ->apply(new NumericStringConverter());
 
-        $testing = Unlabeled::fromIterator(new CSV(
-           '/home/olivierjoubert/HackathonHighFive/assets/images/data/TestNAN.csv'))
+
+       /* $testing = Unlabeled::fromIterator(new CSV(
+            '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'))
+            ->apply(new NumericStringConverter());*/
+
+
+        $testing = Unlabeled::fromIterator($fortest)
             ->apply(new NumericStringConverter());
+
 
         $estimator = new NaiveBayes();
 
@@ -35,6 +41,7 @@ class mlProcessor
 
         $predictions = $estimator->predict($testing);
         $probabilities = $estimator->proba($testing);
+
         return $probabilities;
     }
 
