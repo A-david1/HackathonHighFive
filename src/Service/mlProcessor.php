@@ -26,9 +26,9 @@ class mlProcessor
             ->apply(new NumericStringConverter());
 
 
-       /* $testing = Unlabeled::fromIterator(new CSV(
-            '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'))
-            ->apply(new NumericStringConverter());*/
+        /* $testing = Unlabeled::fromIterator(new CSV(
+             '/home/olivierjoubert/HackathonHighFive/assets/images/data/unlabeled_fakedtest.csv'))
+             ->apply(new NumericStringConverter());*/
 
 
         $testing = Unlabeled::fromIterator($fortest)
@@ -42,7 +42,14 @@ class mlProcessor
         $predictions = $estimator->predict($testing);
         $probabilities = $estimator->proba($testing);
 
-        return $probabilities;
+        $taille = count($probabilities);
+        $sizeavatar = [];
+        for ($i=0; $i < $taille; $i++) {
+            $sizeavatar[$i] = (int)round($probabilities[$i]['Match']*5);
+        }
+
+        return $sizeavatar;
+        //return $probabilities;
     }
 
     public function createDATA()

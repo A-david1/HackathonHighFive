@@ -18,79 +18,73 @@
                     </div>
                     <div class="row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question2" data-choice="{{ choices.0.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat1" data-choice="{{ choices.0.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice1 }}</h3>
                                 <div class="w-100 h-100 form-check-input ">
                                 </div>
                         </a>
 
-                        <a href="#Question2"  data-choice="{{ choices.0.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat1"  data-choice="{{ choices.0.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question2" data-choice="{{ choices.0.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat1" data-choice="{{ choices.0.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question2" data-choice="{{ choices.0.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat1" data-choice="{{ choices.0.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.0.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.1 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 3</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.2 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 4</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.3 }}%</div>
-                                    </div>
-                                </div>
+                </div>
 
-{#                                {% for answer in answers %}#}
-{#                                    {% if answer == 'The human side' %}#}
-{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.0 }} des membres FIVERR ont aussi répondu {{ choices.0.choice1 }}</p>#}
-{#                                    {% elseif  answer == 'Specifications'%}#}
-{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.1 }} des membres FIVERR ont aussi répondu {{ choices.0.choice2 }}</p>7#}
-{#                                    {% elseif  answer == 'Technologies'%}#}
-{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.2 }} des membres FIVERR ont aussi répondu {{ choices.0.choice3 }}</p>#}
-{#                                    {% elseif  answer == 'The paycheck'%}#}
-{#                                        <p class="card-text rquestionsA mx-auto">{{ totalStatAnswer.question1.3 }} des membres FIVERR ont aussi répondu {{ choices.0.choice4 }}</p>#}
-{#                                    {% endif %}#}
-{#                                {% endfor %}#}
+                <a id="stat1"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.0 }}%</div>
+                                </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.1 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 3</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.2 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 4</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question1.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question1.3 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question2" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Q2 -->
                 <a id="Question2"></a>
                 <div class="question" >
@@ -105,63 +99,68 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question3" data-choice="{{ choices.1.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat2" data-choice="{{ choices.1.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question3" data-choice="{{ choices.1.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat2" data-choice="{{ choices.1.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input">
                             </div>
                         </a>
 
-                        <a href="#Question3" data-choice="{{ choices.1.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat2" data-choice="{{ choices.1.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
-                        <a href="#Question3" data-choice="{{ choices.1.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat2" data-choice="{{ choices.1.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.1.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.1 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 3</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 1%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 4</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.3 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat2"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.1 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 3</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 1%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 4</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question2.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question2.3 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question3" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -179,63 +178,68 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question4" data-choice="{{ choices.2.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat3" data-choice="{{ choices.2.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
-                        <a href="#Question4" data-choice="{{ choices.2.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat3" data-choice="{{ choices.2.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question4" data-choice="{{ choices.2.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat3" data-choice="{{ choices.2.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question4" data-choice="{{ choices.2.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat3" data-choice="{{ choices.2.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.2.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.1 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 3</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.2 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 4</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.3 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat3"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.1 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 3</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.2 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 4</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question3.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question3.3 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question4" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -252,64 +256,69 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <a href="#Question5" data-choice="{{ choices.3.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat4" data-choice="{{ choices.3.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question5" data-choice="{{ choices.3.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat4" data-choice="{{ choices.3.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question5" data-choice="{{ choices.3.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat4" data-choice="{{ choices.3.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question5" data-choice="{{ choices.3.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat4" data-choice="{{ choices.3.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.3.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.1 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 3</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.2 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 4</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.3 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat4"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.1 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 3</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.2 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 4</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question4.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question4.3 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question5" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -327,64 +336,69 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question6" data-choice="{{ choices.4.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat5" data-choice="{{ choices.4.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question6" data-choice="{{ choices.4.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat5" data-choice="{{ choices.4.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question6" data-choice="{{ choices.4.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat5" data-choice="{{ choices.4.choice3}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice3 }}</h3>
                             <div class="w-100 h-100 form-check-input checkbox-label ">
                             </div>
                         </a>
 
-                        <a href="#Question6" data-choice="{{ choices.4.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat5" data-choice="{{ choices.4.choice4}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.4.choice4 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.1 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 3</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.2 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 4</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.3 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat5"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.1 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 3</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.2 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.2 }}%</div>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 4</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question5.3 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question5.3 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question6" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -392,7 +406,7 @@
                 <a id="Question6"></a>
                 <div class="question">
                     <div class="p-3 text-center text-white">
-                        <img class="image-fluid" src="{{ asset('build/images/robot-fr-2.png')}}" alt="" width="300px">
+                        <img class="image-fluid" src="{{ asset('build/images/robot-fr-3.png')}}" alt="" width="300px">
                         <h1>
                             Question 6
                         </h1>
@@ -401,38 +415,43 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <a href="#Question7" data-choice="{{ choices.5.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat6" data-choice="{{ choices.5.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question7" data-choice="{{ choices.5.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat6" data-choice="{{ choices.5.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.5.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.1 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat6"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question6.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question6.1 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question7" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -449,38 +468,43 @@
                         </p>
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio">
-                        <a href="#Question8" data-choice="K2000" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat7" data-choice="K2000" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <img src="{{ choices.6.choice1 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question8" data-choice="Dolorean" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat7" data-choice="Dolorean" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <img src="{{ choices.6.choice2 }}" class="img-fluid">
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.1 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat7"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question7.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question7.1 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question8" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -499,38 +523,43 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question9"  data-choice="{{ choices.7.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat8"  data-choice="{{ choices.7.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.7.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question9" data-choice="{{ choices.7.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat8" data-choice="{{ choices.7.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.7.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.1 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat8"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question8.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question8.1 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question9" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -549,38 +578,43 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#Question10" data-choice="{{ choices.8.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat9" data-choice="{{ choices.8.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.8.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#Question10" data-choice="{{ choices.8.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat9" data-choice="{{ choices.8.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.8.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.0 }}%</div>
-                                    </div>
-                                </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.1 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat9"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.0 }}%</div>
                                 </div>
                             </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question9.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question9.1 }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#Question10" class="bt btn-primary"> <button>Next question</button> </a>
                         </div>
                     </div>
                 </div>
@@ -598,44 +632,55 @@
                     </div>
                     <div class=" row text-center justify-content-center text-white check-radio pb-5">
 
-                        <a href="#QuestionResult" data-choice="{{ choices.9.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat10" data-choice="{{ choices.9.choice1}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.9.choice1 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
 
-                        <a href="#QuestionResult" data-choice="{{ choices.9.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
+                        <a href="#stat10" data-choice="{{ choices.9.choice2}}" data-path="{{ path('quizz_choice', {id: 1 })}}"
                            class="answers col-md-5  w-50  mr-2 mb-2 pt-2 shadow checkbox-radio response">
                             <h3>{{ choices.9.choice2 }}</h3>
                             <div class="w-100 h-100 form-check-input ">
                             </div>
                         </a>
                     </div>
-                    <div class="col-8 card text-center mx-auto">
-                        <div class="card-body text-center">
-                            <h4 class="card-title"> <strong> Un peu de stat ?</strong> </h4>
-                            <p>Voici ce qu'ont répondu les membres de FIVERR</p>
-                            <div class="text-center">
-                                <div class="mx-auto">
-                                    <p>réponce 1</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.0 }}%</div>
-                                    </div>
+                </div>
+
+                <a id="stat10"></a>
+                <div class="col-8 card text-center mx-auto">
+                    <div class="card-body text-center">
+                        <h4 class="card-title"> <strong>Need a little stat ?</strong> </h4>
+                        <p>Here's what FIVERR members have answered...</p>
+                        <div class="text-center">
+                            <div class="mx-auto">
+                                <p>Choice 1</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.0 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.0 }}%</div>
                                 </div>
-                                <div class="mx-auto">
-                                    <p>réponce 2</p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.1 }}%</div>
-                                    </div>
+                            </div>
+                            <div class="mx-auto">
+                                <p>Choice 2</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: {{ totalStatAnswer.question10.1 }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ totalStatAnswer.question10.1 }}%</div>
                                 </div>
                             </div>
                         </div>
+                        <div class="pt-4">
+                            <a href="#QuestionResult" class="bt btn-primary"> <button>Result</button> </a>
+                        </div>
                     </div>
                 </div>
+
                 <a id="QuestionResult"></a>
-                <h2 class="mb-5 text-white">Results of the quizz</h2>
-                <div class="align-self-center print-result p-3">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                <h2 class="mb-5 mt-5 pt-5 text-white">Results of the quizz</h2>
+                <div class="d-flex flex-column justify-content-center align-items-center align-self-center p-3">
+                    <p class="text-white">You have a match with 8 Fiverr members !</p>
+                    <a class="button-presentation p-3 text-center text-white mt-3" href="">Pick up your mentor
+                    </a>
+                </div>
                 </div>
         </div>
 
@@ -675,31 +720,24 @@
                         </div>
                     </div>
                     <!-- 1st orbit -->
-{#                    {% for tauxCompatibility in 90..100 %}#}
-{#                        <p>{{ tauxCompatibility }}</p>#}
-                        <div class="orbit orbit1-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
-                        <div class="orbit orbit1-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
-                        <div class="orbit orbit1-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
-                        <div class="orbit orbit1-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
-                        <div class="orbit orbit1-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
-                        <div class="orbit orbit1-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
-{#                    {% endfor %}#}
-
+                    <div class="orbit orbit1-1"><img id="user1" class="avatar3" src="{{ asset('build/images/avatars/avatar1.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit1-2"><img id="user2" class="avatar3" src="{{ asset('build/images/avatars/avatar2.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit1-3"><img id="user3" class="avatar3" src="{{ asset('build/images/avatars/avatar3.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit1-4"><img id="user4" class="avatar3" src="{{ asset('build/images/avatars/avatar4.png') }}" alt="avatar1"></div>
                     <!-- 2nd orbit -->
-                    <div class="orbit orbit2-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit2-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit2-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit2-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit2-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit2-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
-
+                    <div class="orbit orbit2-1"><img id="user5" class="avatar3" src="{{ asset('build/images/avatars/avatar5.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit2-2"><img id="user6" class="avatar3" src="{{ asset('build/images/avatars/avatar6.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit2-3"><img id="user7" class="avatar3" src="{{ asset('build/images/avatars/avatar7.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit2-4"><img id="user8" class="avatar3" src="{{ asset('build/images/avatars/avatar8.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit2-5"><img id="user9" class="avatar3" src="{{ asset('build/images/avatars/avatar9.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit2-6"><img id="user10" class="avatar3" src="{{ asset('build/images/avatars/avatar10.png') }}" alt="avatar1"></div>
                     <!-- 3nd orbit -->
-                    <div class="orbit orbit3-1"><img class="avatar" src="{{ asset('build/images/avatars/cs1048486361028912.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit3-2"><img class="avatar" src="{{ asset('build/images/avatars/cs10188651804540743.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit3-3"><img class="avatar" src="{{ asset('build/images/avatars/cs11010345522393046.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit3-4"><img class="avatar" src="{{ asset('build/images/avatars/cs100630750052269087.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit3-5"><img class="avatar" src="{{ asset('build/images/avatars/cs103822919467497853.png') }}" alt="avatar1"></div>
-                    <div class="orbit orbit3-6"><img class="avatar" src="{{ asset('build/images/avatars/cs1008511162926380344.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-1"><img id="user11" class="avatar3" src="{{ asset('build/images/avatars/avatar11.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-2"><img id="user12" class="avatar3" src="{{ asset('build/images/avatars/avatar12.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-3"><img id="user13" class="avatar3" src="{{ asset('build/images/avatars/avatar13.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-4"><img id="user14" class="avatar3" src="{{ asset('build/images/avatars/avatar14.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-5"><img id="user15" class="avatar3" src="{{ asset('build/images/avatars/avatar15.png') }}" alt="avatar1"></div>
+                    <div class="orbit orbit3-6"><img id="user16" class="avatar3" src="{{ asset('build/images/avatars/avatar16.png') }}" alt="avatar1"></div>
 
                     <!-- main planet -->
                     <div class="ring-before"></div>
