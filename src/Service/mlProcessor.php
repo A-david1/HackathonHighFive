@@ -48,8 +48,8 @@ class mlProcessor
             $sizeavatar[$i] = (int)round($probabilities[$i]['Match']*5);
         }
 
-        //return $sizeavatar;
-        return $probabilities;
+        return $sizeavatar;
+        //return $probabilities;
     }
 
     public function createDATA()
